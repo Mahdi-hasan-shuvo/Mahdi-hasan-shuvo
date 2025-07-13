@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mahdi Hasan Shuvo | ML & Automation Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Senior Automation Engineer specializing in banking systems and machine learning solutions">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #6c5ce7;
+      --secondary: #a29bfe;
+      --dark: #2d3436;
+      --light: #f5f6fa;
+      --gradient: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+      --card-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: var(--dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    
+    /* Header Styles */
+    header {
+      background: var(--gradient);
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+      position: relative;
+      overflow: hidden;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      margin-bottom: 4rem;
+    }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: 0;
+    }
+    
+    .header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid rgba(255,255,255,0.2);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      margin-bottom: 1.5rem;
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .tagline {
+      font-size: 1.4rem;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+    }
+    
+    .bio {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      padding: 1.5rem;
+      border-radius: 12px;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+    
+    .stat-item {
+      background: rgba(255,255,255,0.2);
+      padding: 1.2rem 2rem;
+      border-radius: 12px;
+      min-width: 120px;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: var(--transition);
+    }
+    
+    .stat-item:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,0.3);
+    }
+    
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .social-link {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.3rem;
+      transition: var(--transition);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .social-link:hover {
+      transform: translateY(-5px) scale(1.1);
+      background: white;
+      color: var(--primary);
+    }
+    
+    /* Main Content */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    section {
+      margin-bottom: 5rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+    
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 3rem;
+      position: relative;
+      display: inline-block;
+      color: var(--dark);
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+    
+    /* Experience Section */
+    .experience-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    
+    .experience-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: var(--card-shadow);
+      transition: var(--transition);
+      border-left: 5px solid var(--primary);
+    }
+    
+    .experience-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    }
+    
+    .exp-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .exp-role {
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    
+    .exp-date {
+      display: inline-block;
+      background: rgba(108, 92, 231, 0.1);
+      color: var(--primary);
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+    
+    .exp-desc {
+      color: #666;
+    }
+    
+    .exp-desc li {
+      margin-bottom: 0.7rem;
+      position: relative;
+      padding-left: 1.8rem;
+    }
+    
+    .exp-desc li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-size: 1.2rem;
+    }
+    
+    /* Projects Section */
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      transition: var(--transition);
+      position: relative;
+    }
+    
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--gradient);
+    }
+    
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(108, 92, 231, 0.2);
+    }
+    
+    .project-media {
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .project-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s;
+    }
+    
+    .project-card:hover .project-media img {
+      transform: scale(1.1);
+    }
+    
+    .project-media iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    .project-content {
+      padding: 1.8rem;
+    }
+    
+    .project-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+    
+    .project-subtitle {
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    
+    .project-description {
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+    
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .tech-tag {
+      background: rgba(108, 92, 231, 0.1);
+      color: var(--primary);
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    
+    .project-links {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.3rem;
+      border-radius: 6px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .code-link {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .code-link:hover {
+      background: var(--secondary);
+      transform: translateY(-3px);
+    }
+    
+    .demo-link {
+      background: white;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+    
+    .demo-link:hover {
+      background: rgba(108, 92, 231, 0.05);
+      transform: translateY(-3px);
+    }
+    
+    /* Skills Section */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .skill-category {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      transition: var(--transition);
+    }
+    
+    .skill-category:hover {
+      transform: translateY(-5px);
+    }
+    
+    .skill-category h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    
+    .skill-category h3 i {
+      font-size: 1.2rem;
+    }
+    
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+    
+    .skill {
+      background: rgba(108, 92, 231, 0.1);
+      color: var(--primary);
+      padding: 0.6rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .skill:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-3px);
+    }
+    
+    /* Contact Section */
+    .contact-section {
+      background: white;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: var(--card-shadow);
+      text-align: center;
+    }
+    
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .contact-method {
+      background: rgba(108, 92, 231, 0.05);
+      padding: 1.8rem;
+      border-radius: 12px;
+      transition: var(--transition);
+      border: 1px solid rgba(108, 92, 231, 0.1);
+    }
+    
+    .contact-method:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(108, 92, 231, 0.1);
+      border-color: rgba(108, 92, 231, 0.2);
+    }
+    
+    .contact-method i {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    .contact-method h3 {
+      margin: 0 0 0.5rem 0;
+    }
+    
+    .contact-method a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .contact-method a:hover {
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 3rem 0;
+      margin-top: 5rem;
+    }
+    
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: var(--secondary);
+    }
+    
+    .copyright {
+      font-size: 0.9rem;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 900px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      .tagline {
+        font-size: 1.2rem;
+      }
+      
+      .bio {
+        padding: 1.2rem;
+      }
+      
+      .stats {
+        gap: 1rem;
+      }
+      
+      .stat-item {
+        padding: 1rem;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      header {
+        padding: 3rem 1.5rem;
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .tagline {
+        font-size: 1.1rem;
+      }
+      
+      .profile-img {
+        width: 140px;
+        height: 140px;
+      }
+      
+      h2 {
+        font-size: 2rem;
+      }
+      
+      .container {
+        padding: 0 1.5rem;
+      }
+      
+      .project-gallery,
+      .experience-list {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-section {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="https://avatars.githubusercontent.com/u/102132190?v=4" alt="Mahdi Hasan Shuvo" class="profile-img">
+      <h1>MAHDI HASAN SHUVO</h1>
+      <div class="tagline">Senior Automation Engineer | Machine Learning Specialist</div>
+      <div class="bio">
+        I architect intelligent automation solutions combining cutting-edge ML techniques with robust system design. With extensive experience and numerous open-source contributions, I bridge complex technical requirements with business needs through elegant, scalable solutions.
+      </div>
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">200+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Open Source Repos</div>
+        </div>
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/Mahdi-hasan-shuvo" class="social-link" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/mahdi-hasan-63376427a" class="social-link" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://wa.me/message/MGTHUOBQNSANB1" class="social-link" target="_blank" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.facebook.com/bk4human" class="social-link" target="_blank" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2>Professional Journey</h2>
+      <div class="experience-list">
+        <div class="experience-card">
+          <h3 class="exp-title">Brilliant IT</h3>
+          <div class="exp-role">Senior Automation Engineer</div>
+          <div class="exp-date">2022 - 2024</div>
+          <ul class="exp-desc">
+            <li>Led the development of core banking automation systems processing 50K+ daily transactions with 99.9% uptime</li>
+            <li>Implemented ML-powered fraud detection reducing false positives by 35% while maintaining 98% accuracy</li>
+            <li>Designed CI/CD pipelines that reduced deployment time from 2 hours to under 15 minutes</li>
+            <li>Architected a microservices-based transaction monitoring system handling 1.2M requests/day</li>
+          </ul>
+        </div>
+        
+        <div class="experience-card">
+          <h3 class="exp-title">Brilliant IT & Engineering</h3>
+          <div class="exp-role">Web Scraper</div>
+          <div class="exp-date">2019 - 2022</div>
+          <ul class="exp-desc">
+            <li>Remote web scraping expert, transforming raw data into clean, organized
+insights through filtering, cleaning, and seamless export to CSV/JSON, with
+database management skills</li>
+            <li>Created dynamic and interactive web pages which improved customer
+interaction by 90%.
+</li>
+            <li>Built custom web scrapers and automation tools for data aggregation projects</li>
+            <li>Consulted on ML implementation for 3 startups in fintech and healthcare sectors</li>
+          </ul>
+        </div>
+        
+        <div class="experience-card">
+          <h3 class="exp-title">Open Source Contributions</h3>
+          <div class="exp-role">Tool Builder & Community Contributor</div>
+          <div class="exp-date">2020 - Ongoing</div>
+          <ul class="exp-desc">
+            <li>Maintain 10+ public repositories focused on ML and automation tools</li>
+            <li>Created comprehensive documentation and video tutorials for complex systems</li>
+            <li>Contributed to TensorFlow GPU optimization for Intel ARC graphics cards</li>
+            <li>Developed Nagri language dataset for Sylheti NLP applications</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="project-gallery">
+        <!-- ML Open Source Project -->
+        <div class="project-card">
+          <div class="project-media">
+            <img src="https://raw.githubusercontent.com/Mahdi-hasan-shuvo/ML-opensource-project/main/screenshots/demo.jpg" alt="ML Open Source Project">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">ML Open Source Library</h3>
+            <div class="project-subtitle">Machine Learning Algorithms Collection</div>
+            <div class="project-description">
+              A comprehensive collection of practical machine learning algorithms implemented with CUDA acceleration for educational purposes. Includes implementations of popular algorithms with detailed documentation and examples.
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">CUDA</span>
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">PyTorch</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Mahdi-hasan-shuvo/ML-opensource-project" class="project-link code-link" target="_blank">
+                <i class="fab fa-github"></i> View Code
+              </a>
+              <a href="https://github.com/Mahdi-hasan-shuvo/ML-opensource-project/blob/main/demo.mp4" class="project-link demo-link" target="_blank">
+                <i class="fas fa-play"></i> See Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Smart Attendance System -->
+        <div class="project-card">
+          <div class="project-media">
+            <iframe src="https://private-user-images.githubusercontent.com/102132190/407900174-fd8ab635-4c09-413b-9140-ce694b9a3c62.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTI0MDQxNDAsIm5iZiI6MTc1MjQwMzg0MCwicGF0aCI6Ii8xMDIxMzIxOTAvNDA3OTAwMTc0LWZkOGFiNjM1LTRjMDktNDEzYi05MTQwLWNlNjk0YjlhM2M2Mi5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcxM1QxMDUwNDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02YmRlZTAzZDdhM2ZhNzY4YTUzMjAyNDBmMDdlNGM5ZDE5NWE2MjliNzQ1ZTQxZDZjZjFlYWZkYTQ0OGM0NDc2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9._HUDgMmjyz3ZhupM5hE4v1W6vAnh81qPnY3c98dd0fg"
+" allowfullscreen></iframe>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Smart Attendance</h3>
+            <div class="project-subtitle">Face Recognition System</div>
+            <div class="project-description">
+              A complete face recognition attendance system with real-time tracking and reporting dashboard. Achieves 98% accuracy using OpenCV and deep learning models. Watch the Facebook video demo to see it in action.
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">Face Recognition</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Mahdi-hasan-shuvo/smart-attendance" class="project-link code-link" target="_blank">
+                <i class="fab fa-github"></i> View Code
+              </a>
+              <a href="" class="project-link demo-link" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Smart Fb_Downloder System -->
+        <div class="project-card">
+          <div class="project-media">
+            <img src="https://private-user-images.githubusercontent.com/102132190/455250586-bb331257-e25c-40a3-a8c7-bcef97cf5857.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTI0MDQyMTYsIm5iZiI6MTc1MjQwMzkxNiwicGF0aCI6Ii8xMDIxMzIxOTAvNDU1MjUwNTg2LWJiMzMxMjU3LWUyNWMtNDBhMy1hOGM3LWJjZWY5N2NmNTg1Ny5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcxM1QxMDUxNTZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xYTM2NDZhOTRmYjVlZjQzNTA4NjMyY2VhMWZhZGY4OTRkMDkwYzNkMTlhOWM5YWUyZmU2YTZiYzRiMTUxNzYwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.kIYn88aGVvGmqPHVYtLLTcQi7cHOUZh8f4Lmsw7CiC0"
+" allowfullscreen ></img>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Fb Downloder</h3>
+            <div class="project-subtitle">Facebook Video Downloader Flask project</div>
+            <div class="project-description">
+              <p>✅ Download Facebook **videos** or fallback to **photos**</p>
+              <p>✅ Automatically parses and downloads in **HD** when available</p>
+              <p>✅ User-friendly interface with **form validation** and **error handling**</p>
+              <p>✅ Uses modern `User-Agent` headers to avoid content blocking</p>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Faebook</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">Video-Downloader</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Mahdi-hasan-shuvo/Fb_Downloder" class="project-link code-link" target="_blank">
+                <i class="fab fa-github"></i> View Code
+              </a>
+              <a href="" class="project-link demo-link" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Web-scraping -->
+        <div class="project-card">
+          <div class="project-media">
+            <img src="https://private-user-images.githubusercontent.com/102132190/406361970-9594af2c-0037-4d78-a641-c8f51a354eb1.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTI0MDM5MDMsIm5iZiI6MTc1MjQwMzYwMywicGF0aCI6Ii8xMDIxMzIxOTAvNDA2MzYxOTcwLTk1OTRhZjJjLTAwMzctNGQ3OC1hNjQxLWM4ZjUxYTM1NGViMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcxM1QxMDQ2NDNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03MGIxYzRkZDkxM2EzYmEwNzhjNDE5MGJkN2JjMzU0ZmUwMmNmZjM2YTljYmY3YzcwODhhY2RmZWY1NmRhZjU1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.e_c9J9Y-6zKolcxkIwtHxKOdWBBEUh6rIenZ9wrEpcA" alt="Web-scraping">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Web-scraping</h3>
+            <div class="project-subtitle">Web Scraping with Python</div>
+            <div class="project-description">
+              This repository contains a collection of Python scripts and tools for web scraping. It provides examples and utilities for extracting data from websites using popular libraries such as Beautiful Soup, Scrapy, and Requests.
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Scraping</span>
+              <span class="tech-tag">Web-scraping</span>
+              <span class="tech-tag">Scrapy</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Mahdi-hasan-shuvo/Web-scraping" class="project-link code-link" target="_blank">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Technical Expertise</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3><i class="fas fa-robot"></i> Automation & AI</h3>
+          <div class="skills-list">
+            <div class="skill"><i class="fab fa-python"></i> Python</div>
+            <div class="skill"><i class="fas fa-brain"></i> Machine Learning</div>
+            <div class="skill"><i class="fas fa-project-diagram"></i> TensorFlow</div>
+            <div class="skill"><i class="fas fa-fire"></i> PyTorch</div>
+            <div class="skill"><i class="fas fa-eye"></i> OpenCV</div>
+            <div class="skill"><i class="fas fa-code"></i> Selenium</div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-server"></i> Systems & DevOps</h3>
+          <div class="skills-list">
+            <div class="skill"><i class="fas fa-memory"></i> Low-Level Programming</div>
+            <div class="skill"><i class="fab fa-docker"></i> Docker</div>
+            <div class="skill"><i class="fas fa-code-branch"></i> CI/CD</div>
+            <div class="skill"><i class="fas fa-network-wired"></i> Microservices</div>
+            <div class="skill"><i class="fab fa-linux"></i> Linux</div>
+            <div class="skill"><i class="fas fa-database"></i> SQL</div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-laptop-code"></i> Development</h3>
+          <div class="skills-list">
+            <div class="skill"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="skill"><i class="fab fa-html5"></i> HTML/CSS</div>
+            <div class="skill"><i class="fab fa-node"></i> Node.js</div>
+            <div class="skill"><i class="fas fa-flask"></i> Flask</div>
+            <div class="skill"><i class="fab fa-git-alt"></i> Git</div>
+            <div class="skill"><i class="fas fa-terminal"></i> Bash</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <h2>Let's Work Together</h2>
+      <p>I'm currently available for consulting projects and collaborations. Reach out through any of these channels:</p>
+      
+      <div class="contact-methods">
+        <div class="contact-method">
+          <i class="fab fa-whatsapp"></i>
+          <h3>WhatsApp</h3>
+          <p><a href="https://wa.me/message/MGTHUOBQNSANB1" target="_blank">Send Message</a></p>
+        </div>
+        
+        <div class="contact-method">
+          <i class="fab fa-linkedin-in"></i>
+          <h3>LinkedIn</h3>
+          <p><a href="https://www.linkedin.com/in/mahdi-hasan-63376427a" target="_blank">Connect</a></p>
+        </div>
+        
+        <div class="contact-method">
+          <i class="fab fa-github"></i>
+          <h3>GitHub</h3>
+          <p><a href="https://github.com/Mahdi-hasan-shuvo" target="_blank">View Projects</a></p>
+        </div>
+        
+        <div class="contact-method">
+          <i class="fab fa-facebook-messenger"></i>
+          <h3>Messenger</h3>
+          <p><a href="https://m.me/mahdi.hasan.shuvo" target="_blank">Message Me</a></p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p class="copyright">© 2024 Mahdi Hasan Shuvo. All rights reserved.</p>
+      <p>From Sylhet with ❤️</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Credits</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Scroll animation for sections
+    const animateSections = () => {
+      const sections = document.querySelectorAll('section');
+      const windowHeight = window.innerHeight;
+      
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const triggerPoint = windowHeight * 0.8;
+        
+        if (sectionTop < triggerPoint) {
+          section.classList.add('visible');
+        }
+      });
+    };
+
+    // Initialize animations
+    window.addEventListener('load', animateSections);
+    window.addEventListener('scroll', animateSections);
+
+    // Floating animation for profile image
+    const profileImg = document.querySelector('.profile-img');
+    if (profileImg) {
+      profileImg.style.animation = 'float 6s ease-in-out infinite';
+    }
+  </script>
+</body>
+</html>
