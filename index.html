@@ -992,6 +992,184 @@
             text-shadow: 0 0 20px rgba(0, 255, 247, 0.6);
         }
 
+        .contact-card a:hover {
+            color: var(--primary);
+            text-shadow: 0 0 20px rgba(0, 255, 247, 0.6);
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary), var(--secondary), var(--tertiary));
+            border-radius: 2px;
+            box-shadow: 0 0 20px rgba(0, 255, 247, 0.5);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50%;
+            position: relative;
+            margin-bottom: 4rem;
+            animation: fadeInUp 0.8s ease backwards;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-left: 50%;
+            padding-right: 0;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border: 4px solid var(--darker);
+            border-radius: 50%;
+            z-index: 2;
+            box-shadow: 0 0 30px rgba(0, 255, 247, 0.8);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .timeline-content {
+            background: linear-gradient(135deg, rgba(13, 2, 33, 0.9), rgba(123, 47, 247, 0.1));
+            backdrop-filter: blur(20px) saturate(180%);
+            padding: 2.5rem;
+            border-radius: 25px;
+            border: 2px solid rgba(0, 255, 247, 0.2);
+            width: calc(100% - 4rem);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -20px;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -20px;
+            right: auto;
+            background: linear-gradient(270deg, var(--primary), transparent);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--primary);
+            box-shadow: 
+                0 25px 70px rgba(0, 255, 247, 0.4),
+                inset 0 0 40px rgba(0, 255, 247, 0.1);
+        }
+
+        .timeline-date {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: linear-gradient(135deg, rgba(0, 255, 247, 0.2), rgba(255, 0, 255, 0.2));
+            border: 1px solid var(--primary);
+            border-radius: 25px;
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0, 255, 247, 0.3);
+        }
+
+        .timeline-content h3 {
+            font-size: 1.8rem;
+            color: var(--light);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .timeline-content h4 {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .timeline-content > p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .experience-highlights {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .experience-highlights li {
+            color: var(--gray);
+            padding: 0.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 0.5rem;
+        }
+
+        .experience-highlights li:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                justify-content: flex-start;
+                padding-left: 80px;
+                padding-right: 0;
+            }
+
+            .timeline-dot {
+                left: 30px;
+            }
+
+            .timeline-content::before,
+            .timeline-item:nth-child(even) .timeline-content::before {
+                left: -20px;
+                right: auto;
+                background: linear-gradient(270deg, var(--primary), transparent);
+            }
+
+            .timeline-content {
+                width: calc(100% - 80px);
+            }
+        }
+
         /* Footer */
         footer {
             padding: 3rem 8%;
@@ -1389,6 +1567,92 @@
                     <span class="tag">Security</span>
                     <span class="tag">CI/CD</span>
                     <span class="tag">DevOps</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title">Professional Journey</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2025 - Present</div>
+                    <h3>CEO & Founder</h3>
+                    <h4>BitWith</h4>
+                    <p>Leading innovation in automation and ML solutions</p>
+                    <ul class="achievement-list">
+                        <li>✨ Delivered 100+ successful projects</li>
+                        <li>🚀 Serving 10K+ active users globally</li>
+                        <li>💼 Built scalable automation infrastructure</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2022 - 2024</div>
+                    <h3>Senior Automation Engineer</h3>
+                    <h4>Brilliant IT</h4>
+                    <p>Architected enterprise-level automation solutions and ML systems at scale.</p>
+                    <ul class="experience-highlights">
+                        <li>🏦 Developed core banking systems with 99.9% uptime</li>
+                        <li>🤖 Built ML fraud detection achieving 98% accuracy</li>
+                        <li>⚡ Engineered microservices handling 1.2M requests/day</li>
+                        <li>🔒 Reduced false positives by 35% in fraud detection</li>
+                    </ul>
+                    <div class="skill-tags">
+                        <span class="tag">Banking</span>
+                        <span class="tag">ML</span>
+                        <span class="tag">Microservices</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2019 - 2022</div>
+                    <h3>Web Scraper & ML Consultant</h3>
+                    <h4>Brilliant IT & Engineering</h4>
+                    <p>Specialized in building intelligent data extraction systems and ML solutions.</p>
+                    <ul class="experience-highlights">
+                        <li>🕷️ Built custom scrapers for enterprise clients</li>
+                        <li>📊 Improved customer interaction by 90%</li>
+                        <li>🏥 Consulted on ML for fintech and healthcare sectors</li>
+                        <li>🔧 Automated complex data workflows</li>
+                    </ul>
+                    <div class="skill-tags">
+                        <span class="tag">Web Scraping</span>
+                        <span class="tag">ML Consulting</span>
+                        <span class="tag">FinTech</span>
+                        <span class="tag">Healthcare</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2020 - Ongoing</div>
+                    <h3>Open Source Contributor</h3>
+                    <h4>Community</h4>
+                    <p>Actively contributing to ML and automation open source ecosystem.</p>
+                    <ul class="experience-highlights">
+                        <li>📦 Maintained 50+ repositories on ML/automation</li>
+                        <li>⚡ TensorFlow GPU optimizations</li>
+                        <li>🌐 Created Sylheti NLP datasets</li>
+                        <li>🤝 Collaborated with global developer community</li>
+                    </ul>
+                    <div class="skill-tags">
+                        <span class="tag">Open Source</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Community</span>
+                    </div>
                 </div>
             </div>
         </div>
