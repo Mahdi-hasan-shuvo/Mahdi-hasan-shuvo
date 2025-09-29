@@ -64,7 +64,7 @@
 |------|---------|----------|------------------|
 | **Web Scraper & ML Consultant** | Brilliant IT & Engineering | 2019 - 2022 | - Built custom scrapers<br>- Improved customer interaction by 90%<br>- Consulted on ML for fintech/healthcare |
 | **Senior Automation Engineer** | Brilliant IT | 2022 - 2024 | - Developed core banking systems<br>- ML fraud detection (98% accuracy)<br>- Microservices for 1.2M requests/day |
-| **SEO** | BitWith | 2025 - Ongoing | - 100+ project delevered <br>- 100k + User |
+| **CEO** | BitWith | 2025 - Ongoing | - 100+ project delevered <br>- 100k + User |
 | **Open Source Contributor** | Community | 2020 - Ongoing | - 50+ repos on ML/automation<br>- TensorFlow GPU optimizations<br>- Sylheti NLP datasets |
 
 ---
