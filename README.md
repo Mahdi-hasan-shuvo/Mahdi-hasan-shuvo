@@ -1,6 +1,6 @@
 # Mahdi Hasan Shuvo
 
-![Profile Banner](https://raw.githubusercontent.com/Mahdi-hasan-shuvo/Mahdi-hasan-shuvo/main/banner.jpg) <!-- Add a custom banner image here; create one or use a generated one -->
+
 
 <p align="center">
   <img src="https://avatars.githubusercontent.com/u/102132190?v=4" alt="Profile Picture" width="180" height="180" style="border-radius:50%; border:5px solid #6c5ce7; box-shadow:0 15px 35px rgba(0,0,0,0.2);">
