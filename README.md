@@ -135,7 +135,7 @@ For more, check my [pinned repositories](https://github.com/Mahdi-hasan-shuvo?ta
 I'm available for consulting, collaborations, or just a chat about tech!
 
 - **Portfolio**: [View My Full Portfolio](https://mahdi-hasan-shuvo.github.io/) <!-- Set up GitHub Pages with your HTML -->
-- **Email**: mahdi.hasan.shuvo@example.com <!-- Add your email if you want -->
+- **Email**: shuvobbhh@gmail.com <!-- Add your email if you want -->
 - **Hire Me**: Open to freelance opportunities in ML, automation, and web scraping
 
 <p align="center">
